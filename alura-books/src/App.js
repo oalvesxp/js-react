@@ -1,21 +1,18 @@
 import './App.css';
 import Logo from './components/Logo/Logo.js'
+import Menu from './components/Menu/Menu.js'
 import profile from './images/perfil.svg'
 import bag from './images/sacola.svg'
 
-const menuItens = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE']
+
 const icons = [profile, bag]
 
 function App() {
   return (
     <div className="App">
       <header className='App__header'>
-        <Logo></Logo>
-        <ul className="menu">
-          { menuItens.map((item) => (
-              <li className="menu__item"><p>{item}</p></li>
-          )) }
-        </ul>
+        <Logo />
+        <Menu />
 
         <ul className="menu__icon">
           { icons.map( (item) => (
