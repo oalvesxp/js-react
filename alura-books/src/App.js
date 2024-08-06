@@ -4,7 +4,6 @@ import Menu from './components/Menu/Menu.js'
 import profile from './images/perfil.svg'
 import bag from './images/sacola.svg'
 
-
 const icons = [profile, bag]
 
 function App() {
