@@ -1,14 +1,11 @@
 import './App.css';
-import logo from './images/logo.svg'
+import Logo from './components/Logo/Logo.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="logo">
-          <img src={logo} alt="logo" />
-          <p>Alura Books</p>
-        </div>
+        <Logo />
       </header>
     </div>
   );
