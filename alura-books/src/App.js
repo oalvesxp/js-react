@@ -1,10 +1,7 @@
 import './App.css';
 import Logo from './components/Logo/Logo.js'
 import Menu from './components/Menu/Menu.js'
-import profile from './images/perfil.svg'
-import bag from './images/sacola.svg'
-
-const icons = [profile, bag]
+import Icons from './components/Icons/Icons.js'
 
 function App() {
   return (
@@ -12,14 +9,7 @@ function App() {
       <header className='App__header'>
         <Logo />
         <Menu />
-
-        <ul className="menu__icon">
-          { icons.map( (item) => (
-            <li className="menu__icon-item">
-              <img src={item} alt="icon" />
-            </li>
-          ))}
-        </ul>
+        <Icons />
       </header>
     </div>
   );

@@ -1,3 +1,6 @@
+import './Menu.css';
+
+
 const itens = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE']
 
 function Menu() {
