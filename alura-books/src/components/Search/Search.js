@@ -1,15 +1,15 @@
 import Input from "../Input/Input.js"
 import styled from "styled-components"
 import { useState } from "react"
-import { books } from "./data.js"
+import { books } from "./Data.js"
 
 const SearchContainer = styled.section`
     background: rgb(11,18,48);
     background: linear-gradient(90deg, rgba(3,11,45,1) 0%, rgba(18,69,124,1) 50%, rgba(73,137,193,1) 100%);
     text-align: center;
     padding: 60px 0;
-    height: 270px;
-    width: 100%;
+    height: 700px;
+    width: 100vw;
 `
 const Title = styled.h2`
     color: #FFF;
@@ -30,8 +30,7 @@ const Result = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    padding-top: 10px;
+    padding: 10px 0;
     cursor: pointer;
     
     p {
@@ -46,6 +45,11 @@ const Result = styled.div`
     &:hover {
         border: 1px solid white;
     }
+`
+
+const FilterBooks = styled.div`
+    margin-top: 30px;
+    padding-bottom: 30px;
 `
 
 function Search() {
@@ -63,14 +67,16 @@ function Search() {
                     setFilter(result)
                 }}
             />
-            { filter.map( 
-                book => (
-                    <Result>
-                        <img src={ book.src } />
-                        <p>{ book.name}</p>
-                    </Result>
-                )) 
-            }
+            <FilterBooks>
+                { filter.map( 
+                    book => (
+                        <Result>
+                            <img src={ book.src } />
+                            <p>{ book.name}</p>
+                        </Result>
+                    )) 
+                }
+            </FilterBooks>
         </SearchContainer>
     )
 }

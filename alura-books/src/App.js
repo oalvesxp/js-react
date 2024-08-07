@@ -1,12 +1,11 @@
-import Header from './components/Header/Header.js'
-import styled from 'styled-components'
+import Header from './components/Header/Header.js';
 import Search from './components/Search/Search.js';
+import LastReleases from './components/LastReleases/LasteReleases.js';
+import styled from 'styled-components';
 
 const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  background: rgb(11,18,48);
-  background: linear-gradient(90deg, rgba(3,11,45,1) 0%, rgba(18,69,124,1) 50%, rgba(73,137,193,1) 100%);
 `
 
 function App() {
@@ -14,6 +13,7 @@ function App() {
     <AppContainer>
       <Header />
       <Search />
+      <LastReleases />
     </AppContainer>
   );
 }
