@@ -26,10 +26,31 @@ const Subtitle = styled.h3`
     padding-bottom: 10px;
 `
 
+const Result = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    cursor: pointer;
+    
+    p {
+        width: 200px;
+        color: #FFF;
+    }
+    
+    img {
+        width: 100px;
+    }
+    
+    &:hover {
+        border: 1px solid white;
+    }
+`
+
 function Search() {
     const [filter, setFilter ] = useState([])
-    console.log(filter)
-    
+
     return (
         <SearchContainer>
             <Title>Buscar livros</Title>
@@ -42,6 +63,14 @@ function Search() {
                     setFilter(result)
                 }}
             />
+            { filter.map( 
+                book => (
+                    <Result>
+                        <img src={ book.src } />
+                        <p>{ book.name}</p>
+                    </Result>
+                )) 
+            }
         </SearchContainer>
     )
 }
