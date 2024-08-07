@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Input from "../Input/Input.js"
+import { useState } from "react"
 
 const SearchContainer = styled.section`
     background: rgb(11,18,48);
@@ -24,14 +25,21 @@ const Subtitle = styled.h3`
     padding-bottom: 10px;
 `
 
+
+
 function Search() {
+    const [filled, setFilled ] = useState('')
+    
     return (
         <SearchContainer>
             <Title>Buscar livros</Title>
             <Subtitle>Encontre o livro que você está procurando em nossa estante</Subtitle>
             <Input
                 placeholder="Escreva aqui..."
+                onBlur={ event => setFilled(event.target.value)}
             />
+
+            <p>{ filled }</p>
         </SearchContainer>
     )
 }
