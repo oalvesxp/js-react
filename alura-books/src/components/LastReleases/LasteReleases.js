@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Title } from "../Title/Title.js"
 import { books } from './Data.js'
 
 const LastReleasesContainer = styled.section`
@@ -7,18 +8,9 @@ const LastReleasesContainer = styled.section`
     flex-direction: column;
 `
 
-const Title = styled.h2`
-    width: 100%;
-    padding: 30px 0;
-    background-color: #FFF;
-    color: #EB9B00;
-    font-size: 36px;
-    text-align: center;
-    margin: 0;
-`
-
 const BookDiv = styled.div`
-    margin-top: 30px;
+    background: #F4F4F4;
+    padding: 30px 0;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -28,7 +20,10 @@ const BookDiv = styled.div`
 function LastReleases() {
     return (
         <LastReleasesContainer>
-            <Title>Últimos Lançamentos</Title>
+            <Title 
+                color="#EB9B00"
+                size="36px"
+            >Últimos Lançamentos</Title>
             <BookDiv>
                 { 
                     books.map( 
