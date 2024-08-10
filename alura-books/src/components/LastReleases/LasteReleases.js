@@ -1,6 +1,9 @@
 import styled from "styled-components"
 import { Title } from "../Title/Title.js"
 import { books } from './Data.js'
+import imgBook from "../../images/livro2.png"
+import imgBook2 from "../../images/livro.png"
+import CardRecommendation from "../CardRecommendation/CardRecommendation.js"
 
 const LastReleasesContainer = styled.section`
     padding-bottom: 20px;
@@ -33,6 +36,19 @@ function LastReleases() {
                     )
                 }
             </BookDiv>
+            <CardRecommendation 
+                title="Amplie seus conhecimentos de Angular"
+                subtitle="Angular 11"
+                description="Construindo um aplicação fullstack em Angular"
+                img={imgBook}
+            />
+            <CardRecommendation 
+                title="Apreda tudo sobre Design"
+                subtitle="Liderança em Design"
+                description="Habilidades de gestão para alavancar sua carreira"
+                img={imgBook2}
+            />
+
         </LastReleasesContainer>
     )
 }
